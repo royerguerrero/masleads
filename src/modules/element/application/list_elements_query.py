@@ -12,6 +12,7 @@ class ElementQuery(Query):
     id: int
     name: str
     status: int
+    retries: int
 
 
 def list_elements_query(

@@ -8,3 +8,4 @@ class ElementResponseSchema(BaseModel):
     id: int
     name: str
     status: int
+    retries: int

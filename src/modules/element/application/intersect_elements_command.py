@@ -17,4 +17,8 @@ def intersect_elements(
     uow: AbstractUnitOfWork,
     command: IntersectElementsCommand,
 ) -> CommandResponse:
+    with uow:
+        elements = uow.element_repository.get_by_name(name=command.name)
+
+
     return CommandResponse(dto=command)

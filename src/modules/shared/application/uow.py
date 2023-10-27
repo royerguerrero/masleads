@@ -4,13 +4,13 @@
 from abc import ABC, abstractclassmethod
 
 # Abstract Repositories
-# Import here the abstract repositories
+from src.modules.element.domain import ElementRepository
 
 
 class AbstractUnitOfWork(ABC):
     """Abstract Unit Of Work"""
     # Set here the abstract repositories
-    # dummy_repository: DummyRepository ->  Example
+    element_repository: ElementRepository
 
     def __enter__(self):
         return self

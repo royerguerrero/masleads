@@ -6,7 +6,7 @@ from src.modules.shared.infrastructure import InMemoryRepository
 
 
 class InMemoryUnitOfWork(AbstractUnitOfWork):
-    # dummy_repository = InMemoryRepository()
+    element_repository = InMemoryRepository()
 
     def __enter__(self):
         return super().__enter__()

@@ -5,7 +5,7 @@ from src.modules.shared.application import AbstractUnitOfWork
 from src.modules.shared.infrastructure import Config
 
 # SQLAlchemy Repositories
-# Import here the SQLAlchemy repositories
+# from src.modules.element.infrastructure import ElementSQLAlchemyRepository
 
 # Third-parties
 from sqlalchemy import create_engine, engine
@@ -33,7 +33,7 @@ class SQLAlchemyUnitOfWork(AbstractUnitOfWork):
     def __enter__(self):
         self.session = self.session_factory()
         # Set here the repositories
-        # self.dummy_repository = SQLAlchemyDummyRepository(
+        # self.element_repository = ElementSQLAlchemyRepository(
         #     self.session
         # )
         return super().__enter__()
