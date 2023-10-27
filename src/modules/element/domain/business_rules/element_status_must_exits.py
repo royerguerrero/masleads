@@ -6,7 +6,11 @@ from src.modules.shared.domain import BusinessRule
 # Local
 from src.modules.element.domain import ElementStatusEnum
 
+# Build-ins
+from dataclasses import dataclass
 
+
+@dataclass
 class ElementStatusMustExits(BusinessRule):
     status: int
 

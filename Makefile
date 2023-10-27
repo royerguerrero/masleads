@@ -21,3 +21,12 @@ startmodule: ## Start a new module. use make startmodule MODULE_NAME=starship
 
 shell: ## Interactive shell
 	python3 shell.py
+
+build-api: ## Build a API docker Image
+	docker build -t msleads-elements-microservice .
+
+run-api: ## Run the api using Docker
+	docker run -d --name api -p 80:80 msleads-elements-microservice
+
+logs-api: ## Show the logs of the api in Docker
+	docker logs -f api

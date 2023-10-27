@@ -21,4 +21,3 @@ class Entity(ABC):
         """Checks if a rule is broken"""
         if rule.is_broken():
             raise BusinessRuleException(rule)
-

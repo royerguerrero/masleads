@@ -53,3 +53,18 @@ class Element(AggregateRoot):
     @name.setter
     def name(self, value: str) -> None:
         self._name = value
+
+    def register(
+        bulk_id: int,
+        retries: int,
+        status: int,
+        name: str,
+    ):
+        element = Element(
+            id=bulk_id,
+            retries=retries,
+            status=status,
+            name=name
+        )
+
+        return element
