@@ -14,7 +14,6 @@ app = FastAPI(
 
 app.include_router(elements.router)
 
-
 @app.get('/')
 def index():
     return RedirectResponse('/docs')

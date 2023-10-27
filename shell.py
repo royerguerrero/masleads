@@ -9,13 +9,10 @@ from traitlets.config import Config
 from src.modules.shared.infrastructure import Bootstrap
 
 # Registries
-# Import here your registries
+from src.modules.element.infrastructure import ElementRegistry
 
 bootstrap = Bootstrap(
-    registries=[
-        # Inject to the bootstrap your registries
-        # DummyRegistry,
-    ],
+    registries=[ElementRegistry],
     debug=False
 )
 
