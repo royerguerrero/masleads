@@ -1,4 +1,4 @@
-"""Costing Playground Shell"""
+"""Playground Shell"""
 
 # Built-ins
 import os

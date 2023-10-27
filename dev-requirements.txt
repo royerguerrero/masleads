@@ -1,6 +1,7 @@
 -r requirements.txt
 
-pep8
-pytest
-coverage
-pre-commit
+pep8==1.7.1
+pytest==7.4.3
+coverage==7.3.2
+pre-commit==3.5.0
+ipython==8.16.1
